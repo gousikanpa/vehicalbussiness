@@ -1,0 +1,257 @@
+
+.maintenance-page {
+  padding: 28px;
+  color: #172033;
+}
+
+.maintenance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.maintenance-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.maintenance-header p {
+  margin: 0;
+  color: #718096;
+}
+
+.maintenance-summary {
+  min-width: 230px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #1720330a;
+}
+
+.maintenance-summary span,
+.maintenance-summary small {
+  color: #718096;
+  font-size: 13px;
+}
+
+.maintenance-summary h2 {
+  margin: 8px 0;
+  color: #4f46e5;
+  font-size: 27px;
+}
+
+.maintenance-form-card,
+.maintenance-list-card {
+  padding: 24px;
+  margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #17203308;
+}
+
+.maintenance-form-card h2,
+.maintenance-list-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.maintenance-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.maintenance-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.maintenance-field label {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.maintenance-field input,
+.maintenance-field select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  font: inherit;
+}
+
+.maintenance-field input:focus,
+.maintenance-field select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px #4f46e51a;
+}
+
+.maintenance-description {
+  grid-column: span 2;
+}
+
+.maintenance-actions {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+
+.maintenance-submit,
+.maintenance-cancel {
+  min-height: 44px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.maintenance-submit {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.maintenance-submit:hover {
+  background: #4338ca;
+}
+
+.maintenance-cancel {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.maintenance-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.maintenance-list-header > span {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.maintenance-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.maintenance-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.maintenance-table th {
+  padding: 14px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.maintenance-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+}
+
+.maintenance-type {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 12px;
+}
+
+.maintenance-amount {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.maintenance-row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.maintenance-edit,
+.maintenance-delete {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.maintenance-edit {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.maintenance-delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.maintenance-message {
+  padding: 24px 0;
+  color: #64748b;
+  text-align: center;
+}
+
+.maintenance-error {
+  color: #dc2626;
+}
+
+@media (max-width: 900px) {
+  .maintenance-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .maintenance-page {
+    padding: 16px;
+  }
+
+  .maintenance-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .maintenance-form {
+    grid-template-columns: 1fr;
+  }
+
+  .maintenance-description {
+    grid-column: auto;
+  }
+
+  .maintenance-actions {
+    flex-wrap: wrap;
+  }
+
+  .maintenance-form-card,
+  .maintenance-list-card {
+    padding: 16px;
+  }
+}
